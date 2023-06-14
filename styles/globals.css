@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-label {
+    @apply mb-[5px] block text-sm font-semibold;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    @apply w-full appearance-none rounded-[3px] border border-white-light py-[7px] px-2 text-black/70 shadow-[0_4px_4px_rgba(0,0,0,0.05)] !ring-0 placeholder:text-black placeholder:opacity-70 focus:outline-none;
+  }
+  .has-error .form-input,
+  .has-error .form-textarea,
+  .has-error .form-select,
+  .has-error .form-multiselect,
+  .has-error .multiselect__tags {
+    @apply border-danger focus:border-danger;
+  }
+  .form-select {
+    @apply truncate pr-8;
+  }
+  .form-textarea {
+    @apply min-h-[100px] resize-none;
+  }
+  .form-checkbox,
+  .form-radio {
+    @apply h-5 w-5 rounded-[3px] border border-white-light !shadow-none !outline-none !ring-0;
+  }
+  .form-label {
+    @apply mb-[5px] block text-sm font-semibold;
+  }
+
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center rounded bg-primary px-3 py-[8px] font-semibold text-white duration-300 hover:bg-black hover:text-white;
+  }
+
+  .btn:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
+  .sidebar .next-active {
+    @apply bg-success/10 font-semibold;
+  }
+  .sidebar .next-active svg {
+    @apply text-success;
+  }
+  .sidebar .next-active-sub {
+    @apply bg-black-light;
+  }
+
+  table {
+    @apply w-full whitespace-nowrap rounded-md bg-white text-left;
+  }
+
+  table tr th {
+    @apply border-b border-white-light px-[18px] py-2 font-semibold;
+  }
+
+  table tr th:first-child {
+    @apply rounded-tl-md;
+  }
+
+  table tr th:last-child {
+    @apply rounded-tr-md;
+  }
+
+  table tr td {
+    @apply border-b border-white-light px-[18px] py-1.5;
+  }
+
+  table tr:last-child td {
+    @apply border-b-0;
+  }
+
+  table tr:last-child td:first-child {
+    @apply rounded-bl-md;
+  }
+
+  table tr:last-child td:last-child {
+    @apply rounded-br-md;
+  }
+
+  .status {
+    @apply rounded-[3px] bg-primary/10 px-[7px] py-[5px] text-sm font-semibold text-primary duration-300;
+  }
+
+  .icon-status {
+    @apply inline-flex items-center gap-3 rounded-[3px] bg-success/10 px-2 py-[5px] text-sm text-black duration-300 hover:bg-success hover:text-white;
+  }
+
+  .summary-table {
+    @apply rounded-none bg-transparent;
+  }
+
+  .summary-table tr td {
+    @apply border-none px-0 py-1;
+  }
+}
